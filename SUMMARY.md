@@ -13,6 +13,7 @@
 * [Java socket 多线程任务](java/wo-de-ce-shi.md)
 * [大小端](java/da-xiao-duan.md)
 * [Lambda表达式和函数式编程](java/lambda-biao-da-shi-he-han-shu-shi-bian-cheng.md)
+* [理解jar包](java/li-jie-jar-bao.md)
 
 ## JAVA并发
 
