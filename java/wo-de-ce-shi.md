@@ -130,7 +130,7 @@ public class HttpMultithreadingServer {
 ```
 
 再次打开两个浏览器，输入127.0.0.1:8000访问，我们查询一下服务端的日志：\
-![](https://upload-images.jianshu.io/upload_images/26009612-135f578b52aac5d0.png?imageMogr2/auto-orient/strip|imageView2/2/w/306/format/webp)
+
 
 ![服务端打印日志](<../.gitbook/assets/image (18).png>)
 
