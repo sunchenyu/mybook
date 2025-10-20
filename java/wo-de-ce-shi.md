@@ -57,7 +57,6 @@ public class HttpTestServer {
 ```
 
 我们同时打开两个浏览器页面，输入127.0.0.1:8000访问这个服务端， 然后我们查看一下服务端打印的日志：\
-![](https://upload-images.jianshu.io/upload_images/26009612-c6932fde07b981f2.png?imageMogr2/auto-orient/strip|imageView2/2/w/317/format/webp)\
 
 
 ![服务端打印日志](<../.gitbook/assets/image (38).png>)
