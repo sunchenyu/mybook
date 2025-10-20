@@ -1,6 +1,7 @@
 # Table of contents
 
 * [简介](README.md)
+* [架构设计](jia-gou-she-ji.md)
 
 ## Java基础 <a href="#java" id="java"></a>
 
