@@ -123,5 +123,46 @@ TCP 的 Keepalive 是一种空闲连接检测机制。它用于判断长时间�
 
 ## Nginx配置
 
+### worker多线程
 
+```
+worker_processes auto; 
+worker_cpu_affinity auto; 
+worker_rlimit_nofile 409600;
+```
+
+启用多线程处理，默认情况下，nginx只有一个master线程来处理，这段配置告诉nginx尽可能多地启用worker线程来帮助处理高并发的任务。&#x20;
+
+### 主配置
+
+```
+events {
+    use                 epoll;
+    worker_connections  409600;
+    multi_accept        on;
+    accept_mutex        off;
+}
+
+http {
+    include             /etc/nginx/mime.types;
+    default_type        application/octet-stream;
+
+    access_log          /var/log/nginx/access.log  main;
+
+    sendfile            on;
+    tcp_nopush          on;
+    tcp_nodelay         on;
+
+    keepalive_timeout   300;
+    keepalive_requests  20000000;
+
+    include /usr/local/nginx/conf.d/*.conf;
+}
+```
+
+events表示启用epoll模型来处理高并发的请求，epoll模型是linux底层的高性能、高并发处理模型，nginx也是基于此实现的。&#x20;
+
+http的主配置中，开启sendfile、tcp\_nopush和tcp\_nodelay。
+
+keepalive\_timeout表示超时时间、keepalive\_requests表示同一个连接接收多少请求后断开。
 
