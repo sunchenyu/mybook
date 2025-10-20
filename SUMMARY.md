@@ -4,7 +4,7 @@
 
 ## 架构设计
 
-* [数字短信架构设计](jia-gou-she-ji/shu-zi-duan-xin-jia-gou-she-ji.md)
+* [数字短信架构设计](jia-gou-she-ji.md)
 
 ## Java基础 <a href="#java" id="java"></a>
 
