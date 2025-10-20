@@ -24,9 +24,7 @@
 
 <figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
-
-
-
+## 安卓终端展示结果
 
 <figure><img src=".gitbook/assets/image.png" alt="" width="375"><figcaption></figcaption></figure>
 
