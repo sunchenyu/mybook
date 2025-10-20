@@ -28,7 +28,7 @@ ulimit -a
 
 可以将这两个值改成500000，因为单机的话，50万的并发连接基本也到nginx的极限了
 
-<mark style="color:red;">注意：nofile的最大值不能超过/proc/sys/fs/nr\_open这个值，默认是(1048576)</mark>
+<mark style="color:red;">注意：nofile的最大值不能超过/proc/sys/fs/nr\_open这个值</mark>
 
 完成后再次执行ulimit -a
 
@@ -107,4 +107,21 @@ TCP 的 Keepalive 是一种空闲连接检测机制。它用于判断长时间�
 
 #### net.core.somaxconn
 
-决定tcp全连接队列的backlog数
+限制全连接队列（accept 队列）的最大长度上限。
+
+#### net.ipv4.tcp\_max\_syn\_backlog
+
+控制半连接队列（SYN 队列）的最大长度。
+
+#### net.ipv4.tcp\_syncookies
+
+控制是否启用TCP SYN Cookies 机制，用于防御SYN Flood攻击。通过一个加密算法，将必要状态信息（源IP、端口、MSS 等）编码到 TCP 序列号中。当客户端发回 ACK 时，内核从 ACK 序列号中解析出信息。
+
+#### net.ipv4.ip\_local\_port\_range
+
+控制本机可用的临时端口号范围（用于主动连接的源端口）。
+
+## Nginx配置
+
+
+
