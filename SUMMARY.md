@@ -5,6 +5,7 @@
 ## 架构设计
 
 * [数字短信架构设计](jia-gou-she-ji.md)
+* [高并发Nginx和Linux系统配置](jia-gou-she-ji/gao-bing-fa-nginx-he-linux-xi-tong-pei-zhi.md)
 
 ## Java基础 <a href="#java" id="java"></a>
 
