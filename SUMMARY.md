@@ -14,6 +14,7 @@
 * [大小端](java/da-xiao-duan.md)
 * [Lambda表达式和函数式编程](java/lambda-biao-da-shi-he-han-shu-shi-bian-cheng.md)
 * [理解jar包](java/li-jie-jar-bao.md)
+* [Java集合](java/java-ji-he.md)
 
 ## JAVA并发
 
