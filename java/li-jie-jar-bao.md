@@ -24,7 +24,7 @@ public class Welcome {
 
 使用javac将这两个java文件构建成class文件
 
-
+<div align="left"><figure><img src="../.gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure></div>
 
 将两个class文件打成jar包，执行如下命令
 
@@ -32,11 +32,11 @@ public class Welcome {
 jar -cvf test.jar Teacher.class Welcome.class
 ```
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 修改jar包里面的MANIFEST.MF文件，新增Main-Class入口配置
 
-<div align="left"><figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 执行jar包
 
