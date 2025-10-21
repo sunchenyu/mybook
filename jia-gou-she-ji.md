@@ -26,6 +26,11 @@
 
 ## 安卓终端展示结果
 
-<figure><img src=".gitbook/assets/image (7).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/54381481ece71bb4c8d08428adb223ab.jpg" alt="" width="375"><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/image (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+## 苹果终端展示结果
+
+<figure><img src=".gitbook/assets/image.png" alt="" width="375"><figcaption></figcaption></figure>
+
+
+
