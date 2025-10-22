@@ -11,11 +11,11 @@
 
 * [Java socket编程](java/java-socket-bian-cheng.md)
 * [Java socket 多线程任务](java/wo-de-ce-shi.md)
-* [大小端](java/da-xiao-duan.md)
 * [Lambda表达式和函数式编程](java/lambda-biao-da-shi-he-han-shu-shi-bian-cheng.md)
-* [理解jar包](java/li-jie-jar-bao.md)
-* [Java集合](java/java-ji-he.md)
 * [Java异步编程](java/java-yi-bu-bian-cheng.md)
+* [理解jar包](java/li-jie-jar-bao.md)
+* [大小端](java/da-xiao-duan.md)
+* [Java集合](java/java-ji-he.md)
 
 ## JAVA并发
 
