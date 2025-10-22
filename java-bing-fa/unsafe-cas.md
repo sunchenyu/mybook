@@ -158,7 +158,7 @@ public class CasTest2 {
 
 输出结果：
 
-![测试结果](<../.gitbook/assets/image (8).png>)
+![测试结果](<../.gitbook/assets/image (8) (1).png>)
 
 ## 三、测试CAS结果
 

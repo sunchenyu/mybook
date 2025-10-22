@@ -377,7 +377,7 @@ return gen;
 
 打个断点 ![](https://upload-images.jianshu.io/upload_images/26009612-104259ba5f2f20d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![](<../.gitbook/assets/image (7) (1).png>)
+![](<../.gitbook/assets/image (7) (1) (1).png>)
 
 我们发现generateClass走到的是KeyFactory里的generateClass方法
 

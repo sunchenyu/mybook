@@ -226,7 +226,7 @@ public class RejectionStrategyDemo {
 
 **结果：**&#x629B;弃了新的任务，没有任何提示&#x20;
 
-![ DiscardPolicy测试结果](<../.gitbook/assets/image (6) (1).png>)
+![ DiscardPolicy测试结果](<../.gitbook/assets/image (6) (1) (1).png>)
 
 **DiscardOldestPolicy**
 
