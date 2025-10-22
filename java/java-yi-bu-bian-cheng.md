@@ -2,9 +2,31 @@
 
 ## 概述
 
-
+允许程序在等待某个任务完成的同时，不阻塞主线程（或主流程），而是去执行其他任务。
 
 ## 学习样例
+
+### 同步任务
+
+```
+//假设这个任务需要2秒执行
+try {
+    TimeUnit.SECONDS.sleep(2);
+} catch (InterruptedException e) {
+    throw new RuntimeException(e);
+}
+String s = "Hello";
+System.out.println(Thread.currentThread().getName() + " 执行任务");
+
+System.out.println("main线程等待结果...");
+System.out.println("结果 = " + s);
+```
+
+执行结果如下
+
+<div align="left"><figure><img src="../.gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure></div>
+
+我们的主线程只会一直等待任务处理完毕才能继续进行下一步，所以打印的main执行任务。
 
 ### 主线程等待异步结果
 
@@ -29,6 +51,8 @@ System.out.println("结果 = " + result);
 
 <div align="left"><figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure></div>
 
+我们的主线程先打印的main线程等待结果，这一步就可以去执行别的任务了。
+
 ### 指定异步任务执行的线程池
 
 ```
@@ -48,6 +72,8 @@ executor.shutdown();
 执行结果如下
 
 <div align="left"><figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure></div>
+
+这个时候我们发现这个任务是通过我们构建的executor 线程池去跑的
 
 ### 异步任务配置和执行
 
@@ -85,18 +111,15 @@ CompletableFuture<Void> future = CompletableFuture
 
 <div align="left"><figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure></div>
 
+不同的点在于thenApply、thenAccept、thenRun对应的回调方法的执行位置。
+
+#### 说明
+
 如果前一个任务「已经完成」，那么注册回调的线程（可能是 main）立刻执行；避免额外线程切换的开销。
 
 如果前一个任务「还没完成」，那回调就会被保存起来，等异步线程执行完后触发；
 
 谁触发 complete()（也就是任务完成），谁就执行下一个阶段。
-
-那为什么要有 thenApplyAsync因为有时候你希望一定在异步线程中执行，比如：
-
-* 耗时操作（I/O、网络）
-* 不想阻塞 main 或业务线程
-
-
 
 ### 异步执行
 
@@ -119,6 +142,11 @@ System.out.println("结果：" + future.get());
 <div align="left"><figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure></div>
 
 我们发现都是提交到线程池去执行的，不会存在上一个案例里面，有主线程执行的情况。
+
+那为什么要有 thenApplyAsync因为有时候你希望一定在异步线程中执行，比如：
+
+* 耗时操作（I/O、网络）
+* 不想阻塞 main 或业务线程
 
 ### 异常处理
 
