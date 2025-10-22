@@ -8,7 +8,7 @@
 
 ### 同步任务
 
-```
+```java
 //假设这个任务需要2秒执行
 try {
     TimeUnit.SECONDS.sleep(2);
@@ -30,7 +30,7 @@ System.out.println("结果 = " + s);
 
 ### 主线程等待异步结果
 
-```
+```java
 CompletableFuture<String> future =
     CompletableFuture.supplyAsync(() -> {
         try {
@@ -55,7 +55,7 @@ System.out.println("结果 = " + result);
 
 ### 指定异步任务执行的线程池
 
-```
+```java
 ExecutorService executor = Executors.newFixedThreadPool(2);
 
 CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> {
@@ -77,7 +77,7 @@ executor.shutdown();
 
 ### 异步任务配置和执行
 
-```
+```java
 CompletableFuture<Void> future = CompletableFuture
             .supplyAsync(() -> {
 //                try {
@@ -121,9 +121,9 @@ CompletableFuture<Void> future = CompletableFuture
 
 谁触发 complete()（也就是任务完成），谁就执行下一个阶段。
 
-### 异步执行
+### 强制异步任务通过线程池执行
 
-```
+```java
 CompletableFuture<String> future = CompletableFuture
     .supplyAsync(() -> {
         System.out.println(Thread.currentThread().getName() + " supplyAsync 执行");
@@ -143,14 +143,18 @@ System.out.println("结果：" + future.get());
 
 我们发现都是提交到线程池去执行的，不会存在上一个案例里面，有主线程执行的情况。
 
-那为什么要有 thenApplyAsync因为有时候你希望一定在异步线程中执行，比如：
+#### 说明
 
-* 耗时操作（I/O、网络）
+那为什么要有 thenApplyAsync？
+
+因为有时候你希望一定在异步线程中执行，比如：
+
+* 耗时操作（I/O、网络、文件读写、数据库查询）
 * 不想阻塞 main 或业务线程
 
 ### 异常处理
 
-```
+```java
 CompletableFuture<String> future = CompletableFuture
     .supplyAsync(() -> {
         System.out.println(Thread.currentThread().getName() + " 执行任务");
@@ -171,7 +175,7 @@ System.out.println("结果：" + future.get());
 
 ### thenCompose方法
 
-```
+```java
 CompletableFuture<String> future = CompletableFuture
     .supplyAsync(() -> {
         System.out.println(Thread.currentThread().getName() + " 获取用户ID");
@@ -189,11 +193,19 @@ System.out.println("结果：" + future.get());
 
 <div align="left"><figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure></div>
 
+**为什么需要thenCompose方法？**
 
+如果想在得到第一步的异步结果之后，还想要在构建一个CompletableFuture任务，并且想要返回回去，那这个情况下，用thenApply就只能返回类似于这样的返回值
+
+```
+CompletableFuture<CompletableFuture<String>>
+```
+
+thenCompose的返回值就是一个CompletableFuture\<String>，并且这个方法会将这个新的异步任务返回给上层进行编排。
 
 ### 手动构建
 
-```
+```java
 // 手动创建一个 CompletableFuture（此时是空的，没有任务）
 CompletableFuture<String> future = new CompletableFuture<>();
 
@@ -227,9 +239,15 @@ System.out.println(Thread.currentThread().getName() + " 主线程结束");
 
 <div align="left"><figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure></div>
 
-### 为什么需要手动构建
+**为什么需要手动构建？**
 
+如果我们在Netty中开发程序，我们很熟悉的一个地方就是
 
+```
+channel.writeAndFlush(msg); 
+```
+
+这个是不会获取到响应数据的，必须要在handle当中才能读取到数据，这个时候，我们就没办法使用supplyAsync等方法，这个时候就可以使用HashMap，将对应的消息id和CompletableFuture存储进去，以便在收到相应的时候可以手动匹配到，进行手动完成操作。
 
 
 
