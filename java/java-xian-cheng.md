@@ -24,7 +24,28 @@ new Thread(...).start();
 4. 线程池提交Runnable任务
 5. CompletableFuture构建异
 
+## 线程的状态有哪几种
 
+```
+public enum State {
+    NEW,
+    RUNNABLE,
+    BLOCKED,
+    WAITING,
+    TIMED_WAITING,
+    TERMINATED;
+}
+```
 
+新建状态 NEW ：线程对象已创建，但还没启动（没调用 start()）
 
+可运行状态 RUNNABLE ：线程正在运行或准备运行（取决于系统调度）
+
+阻塞状态 BLOCKED ：线程在等待获取锁（synchronized）
+
+无限等待状态 WAITING ：调用 wait() / join() / LockSupport.park() 等，等待被唤醒
+
+限时等待状态 TIMED\_WAITING ：有时间限制的等待，例如 sleep(1000)、wait(timeout)
+
+终止状态 TERMINATED： 线程执行完毕或抛异常结束
 
