@@ -201,3 +201,42 @@ thread.isInterrupted()：询问某个线程是否被中断，只检查，不清�
 
 Thread.interrupted()：静态方法，询问当前线程是否被中断，并重置中断状态
 
+### 守护线程
+
+调用线程的setDaemon方法，设置为ture代表守护线程。
+
+守护线程一直在后台运行。当主线程结束，JVM 退出，守护线程被自动终止。
+
+```
+// 创建守护线程
+Thread daemonThread = new Thread(() -> {
+    while (true) {
+        System.out.println("守护线程运行中...");
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            break;
+        }
+    }
+});
+
+// 设置为守护线程（必须在 start() 之前）
+daemonThread.setDaemon(true);
+daemonThread.start();
+
+// 主线程（用户线程）
+for (int i = 0; i < 3; i++) {
+    System.out.println("主线程工作：" + i);
+    try {
+        Thread.sleep(1000);
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+}
+
+System.out.println("主线程结束，JVM退出，守护线程被终止。");
+```
+
+执行结果
+
+<div align="left"><figure><img src="../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure></div>
