@@ -53,21 +53,59 @@ public enum State {
 
 ### 线程信息获取
 
-
+```java
+thread.getName();                       //获取线程名
+thread.getId();                         //获取线程的唯一 ID
+thread.getPriority();                   //获取线程优先级
+thread.getState();                      //获取线程当前状态
+thread.getThreadGroup();                //获取线程所属的线程组
+thread.isAlive();                       //判断线程是否还在运行
+thread.isDaemon();                      //判断或设置为守护线程
+thread.isInterrupted();                 //检查线程是否被中断
+```
 
 ### 线程控制
 
-
+```java
+Thread.sleep(1000);               //让当前线程休眠一段时间（不释放锁）
+Thread.yield();                         //让出CPU执行权，回到就绪状态（不一定生效）
+thread.join();                          //等待另一个线程执行完毕再继续
+thread.join(1000);                //最多等待毫秒数
+thread.join(1000, 100);     //等待的毫秒数 + 微秒数
+thread.interrupt();                     //向线程发出中断信号（非强制中断）
+Thread.interrupted();                   //检查并清除中断状态
+```
 
 ### 优先级和守护线程
 
+```java
+thread.setName("MyThread");               //设置线程名字
+thread.setPriority(Thread.MAX_PRIORITY);  //设置线程优先级（1~10，默认 5）
+thread.setDaemon(true);                   //设置为守护线程（必须在 start() 前调用）
+```
 
+## 示例
 
-### 线程结束和销毁
+### 查看线程状态
 
+```java
+Thread thread = new Thread(() -> {
+try {
+    Thread.sleep(1000);
+} catch (InterruptedException e) {}
+});
+System.out.println("未调用start方法：" + thread.getState()); // NEW
+thread.start();
+System.out.println("调用sleep方法前：" + thread.getState()); // RUNNABLE
+Thread.sleep(10);
+System.out.println("调用join方法前：" + System.currentTimeMillis() + " " +  thread.getState()); // TIMED_WAITING
+thread.join();
+System.out.println("线程处理完毕：" + System.currentTimeMillis() + " " +thread.getState()); // TERMINATED
+```
 
+打印结果如下
 
-
+<div align="left"><figure><img src="../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure></div>
 
 
 
