@@ -195,7 +195,9 @@ System.out.println("第二次检查：" + Thread.interrupted()); // false（因�
 
 <div align="left"><figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure></div>
 
+### thread.isInterrupted() 和 Thread.interrupted()的区别
 
+thread.isInterrupted()：询问某个线程是否被中断，只检查，不清除中断状态
 
-
+Thread.interrupted()：静态方法，询问当前线程是否被中断，并重置中断状态
 
