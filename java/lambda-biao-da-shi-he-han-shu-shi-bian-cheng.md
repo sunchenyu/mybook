@@ -83,3 +83,4 @@ public class F {
 | ToIntFunction ToLongFunction ToDoubleFunction | int(long、double) applyAsDouble(T value); | T                 | intlongdouble | 计算 int 、 long 、double值的函数  |
 | IntFunction LongFunction DoubleFunction       | R apply(int(long,double) value)          | int, long, double | R             | 参数分别为int、long、double 类型的函数 |
 
+建议学习：《Java 8函数式编程》
