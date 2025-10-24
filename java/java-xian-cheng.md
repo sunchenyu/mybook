@@ -67,11 +67,11 @@ thread.isInterrupted();                 //检查线程是否被中断
 ### 线程控制
 
 ```java
-Thread.sleep(1000);               //让当前线程休眠一段时间（不释放锁）
+Thread.sleep(1000);                     //让当前线程休眠一段时间（不释放锁）
 Thread.yield();                         //让出CPU执行权，回到就绪状态（不一定生效）
 thread.join();                          //等待另一个线程执行完毕再继续
-thread.join(1000);                //最多等待毫秒数
-thread.join(1000, 100);     //等待的毫秒数 + 微秒数
+thread.join(1000);                      //最多等待毫秒数
+thread.join(1000, 100);                 //等待的毫秒数 + 微秒数
 thread.interrupt();                     //向线程发出中断信号（非强制中断）
 Thread.interrupted();                   //检查并清除中断状态
 ```
@@ -106,6 +106,96 @@ System.out.println("线程处理完毕：" + System.currentTimeMillis() + " " +t
 打印结果如下
 
 <div align="left"><figure><img src="../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure></div>
+
+### 让出CPU执行权
+
+```
+Runnable task = () -> {
+    for (int i = 0; i < 5; i++) {
+        System.out.println(Thread.currentThread().getName() + " - " + i);
+        Thread.yield(); // 提示CPU可以切换线程（不一定生效）
+    }
+};
+
+Thread t1 = new Thread(task, "A");
+Thread t2 = new Thread(task, "B");
+
+t1.start();
+t2.start();
+```
+
+执行结果
+
+<div align="left"><figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure></div>
+
+### 主线程等待子线程执行完毕
+
+```
+Thread t = new Thread(() -> {
+    try {
+        System.out.println("子线程开始");
+        Thread.sleep(2000);
+        System.out.println("子线程结束");
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+});
+
+t.start();
+System.out.println("主线程等待子线程执行完...");
+t.join(); // 一直等到子线程结束
+System.out.println("主线程继续执行");
+```
+
+执行结果
+
+<div align="left"><figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure></div>
+
+### 向线程发出中断信号
+
+```
+Thread t = new Thread(() -> {
+    while (true) {
+        if (Thread.currentThread().isInterrupted()) {
+            System.out.println("检测到中断信号，退出线程");
+            break;
+        }
+        System.out.println("线程运行中...");
+        try {
+            Thread.sleep(500); // 如果在sleep中被中断，会抛出异常
+        } catch (InterruptedException e) {
+            System.out.println("sleep中被中断！");
+            Thread.currentThread().interrupt(); // 重新设置中断状态
+        }
+    }
+});
+
+t.start();
+Thread.sleep(1500); // 主线程等待1.5秒
+t.interrupt(); // 发送中断信号
+```
+
+执行结果
+
+<div align="left"><figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure></div>
+
+Thread.currentThread().interrupt() 只是设置一个中断标志，并不会强制停止线程；
+
+在线程处于阻塞状态（如 sleep、wait）时，会抛出 InterruptedException
+
+### 检查并清除中断状态
+
+```
+Thread.currentThread().interrupt(); // 设置中断标志为true
+System.out.println("第一次检查：" + Thread.interrupted()); // true（并清除标志）
+System.out.println("第二次检查：" + Thread.interrupted()); // false（因为已清除）
+```
+
+打印结果
+
+<div align="left"><figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure></div>
+
+
 
 
 

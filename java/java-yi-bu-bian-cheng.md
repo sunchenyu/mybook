@@ -49,7 +49,7 @@ System.out.println("结果 = " + result);
 
 异步执行任务，然后通过get方法获取到异步任务的执行结果，get方法会阻塞当前线程，执行结果如下
 
-<div align="left"><figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure></div>
 
 我们的主线程先打印的main线程等待结果，这一步就可以去执行别的任务了。
 
@@ -71,7 +71,7 @@ executor.shutdown();
 
 执行结果如下
 
-<div align="left"><figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 这个时候我们发现这个任务是通过我们构建的executor 线程池去跑的
 
@@ -105,11 +105,11 @@ CompletableFuture<Void> future = CompletableFuture
 
 执行结果如下
 
-<div align="left"><figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 打开注释然后执行，获取到的执行结果
 
-<div align="left"><figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 不同的点在于thenApply、thenAccept、thenRun对应的回调方法的执行位置。
 
@@ -139,7 +139,7 @@ System.out.println("结果：" + future.get());
 
 执行结果
 
-<div align="left"><figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 我们发现都是提交到线程池去执行的，不会存在上一个案例里面，有主线程执行的情况。
 

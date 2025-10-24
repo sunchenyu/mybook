@@ -103,7 +103,7 @@ javah -classpath . -jni L11
 
 最终目录下存在的三个文件如下
 
-<div align="left"><figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 查看L11.h
 
@@ -231,13 +231,13 @@ public class L12 {
 
 打印结果
 
-<div align="left"><figure><img src="../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 我们发现可以通过配置java.lang.Integer.IntegerCache.high来配置缓存大小，通过启动参数-XX:AutoBoxCacheMax=配置
 
 我们给启动参数配置配置成2000，再次测试
 
-<figure><img src="../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 打印结果如下
 
@@ -367,7 +367,7 @@ System.out.println(q2);
 
 打印数据如下
 
-<div align="left"><figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 所以我们猜想，在小于65536范围内的数
 
