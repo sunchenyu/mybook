@@ -108,4 +108,4 @@ public class ParkTest {
 
 ## 四、目的
 
-1、使用Unsafe中的park和unpark和上篇文章《Unsafe中的CAS》说的可以完成一个自己的锁，这应该是并发编程基础的前提条件。
+1、使用Unsafe中的park和unpark和上篇文章《Unsafe中的CAS》说的可以完成一个自己的锁，这是并发编程基础的前提条件。
