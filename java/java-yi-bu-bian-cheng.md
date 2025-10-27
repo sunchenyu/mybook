@@ -249,5 +249,15 @@ channel.writeAndFlush(msg);
 
 这个是不会获取到响应数据的，必须要在handle当中才能读取到数据，这个时候，我们就没办法使用supplyAsync等方法，这个时候就可以使用HashMap，将对应的消息id和CompletableFuture存储进去，以便在收到相应的时候可以手动匹配到，进行手动完成操作。
 
+## 总结
 
+thenAccept：只会在正常完成时执行。异常完成会触发 exceptionally / handle / whenComplete 的异常分支。
+
+exceptionally：只在异常完成时调用。它不会改变原 future，但会返回一个新的、被“恢复”的 future。要想拿到恢复后的值，必须用返回的新 future。
+
+handle：无论成功或异常，都会被调用。回调函数可返回任意类型的新结果。
+
+whenComplete：成功或失败都会执行，但不会改变结果。
+
+orTimeout：会让目标 future 在超时后异常完成（并通常是同一个 future）
 
