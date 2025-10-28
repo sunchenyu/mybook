@@ -17,6 +17,7 @@
 * [理解jar包](java/li-jie-jar-bao.md)
 * [大小端](java/da-xiao-duan.md)
 * [Java集合](java/java-ji-he.md)
+* [LengthFieldBasedFrameDecoder](java/lengthfieldbasedframedecoder.md)
 
 ## JAVA并发
 
