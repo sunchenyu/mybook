@@ -18,6 +18,7 @@
 * [大小端](java/da-xiao-duan.md)
 * [Java集合](java/java-ji-he.md)
 * [LengthFieldBasedFrameDecoder](java/lengthfieldbasedframedecoder.md)
+* [流速控制](java/liu-su-kong-zhi.md)
 
 ## JAVA并发
 
