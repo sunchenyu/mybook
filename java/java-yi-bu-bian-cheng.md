@@ -71,7 +71,7 @@ executor.shutdown();
 
 执行结果如下
 
-<div align="left"><figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 这个时候我们发现这个任务是通过我们构建的executor 线程池去跑的
 
@@ -105,11 +105,11 @@ CompletableFuture<Void> future = CompletableFuture
 
 执行结果如下
 
-<div align="left"><figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 打开注释然后执行，获取到的执行结果
 
-<div align="left"><figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 不同的点在于thenApply、thenAccept、thenRun对应的回调方法的执行位置。
 

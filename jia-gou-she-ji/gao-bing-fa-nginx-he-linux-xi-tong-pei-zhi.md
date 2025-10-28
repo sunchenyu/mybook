@@ -12,7 +12,7 @@ ulimit -a
 
 如下图显示的，就是默认的Linux系统的一些信息。
 
-<div align="left"><figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 修改/etc/security/limits.conf文件中的配置信息
 

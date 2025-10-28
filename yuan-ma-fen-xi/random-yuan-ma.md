@@ -31,7 +31,7 @@ System.out.println(random.nextInt());
 
 其他包括
 
-<div align="left"><figure><img src="../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 ## 构造器
 
