@@ -2,7 +2,9 @@
 
 ## 架构图
 
-<figure><img src=".gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+
 
 ## 整体说明
 

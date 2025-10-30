@@ -149,7 +149,7 @@ System.out.println("主线程继续执行");
 
 执行结果
 
-<div align="left"><figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 ### 向线程发出中断信号
 

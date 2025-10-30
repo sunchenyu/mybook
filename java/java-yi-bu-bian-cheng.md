@@ -71,7 +71,7 @@ executor.shutdown();
 
 执行结果如下
 
-<div align="left"><figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 这个时候我们发现这个任务是通过我们构建的executor 线程池去跑的
 
