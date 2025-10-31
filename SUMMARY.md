@@ -19,6 +19,7 @@
 * [Java集合](java/java-ji-he.md)
 * [LengthFieldBasedFrameDecoder](java/lengthfieldbasedframedecoder.md)
 * [流速控制](java/liu-su-kong-zhi.md)
+* [编码体系](java/bian-ma-ti-xi.md)
 
 ## JAVA并发
 

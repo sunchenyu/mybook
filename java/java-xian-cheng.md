@@ -149,7 +149,7 @@ System.out.println("主线程继续执行");
 
 执行结果
 
-<div align="left"><figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 ### 向线程发出中断信号
 
@@ -177,7 +177,7 @@ t.interrupt(); // 发送中断信号
 
 执行结果
 
-<div align="left"><figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 Thread.currentThread().interrupt() 只是设置一个中断标志，并不会强制停止线程；
 
