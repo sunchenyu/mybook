@@ -22,6 +22,7 @@
 * [字符编码体系](java/zi-fu-bian-ma-ti-xi.md)
 * [Netty](java/netty.md)
 * [定时任务的实现方案](java/ding-shi-ren-wu-de-shi-xian-fang-an.md)
+* [字典树](java/zi-dian-shu.md)
 
 ## JAVA并发
 
