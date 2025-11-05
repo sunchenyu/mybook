@@ -1,4 +1,4 @@
-# 编码体系
+# 字符编码体系
 
 ## ASCII到Unicode
 
@@ -72,7 +72,7 @@ private static void printBytes(String s, Charset charset) {
 
 执行结果如下
 
-<div align="left"><figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure></div>
 
 ### 问题
 
@@ -92,7 +92,7 @@ ISO\_8859\_1 是单字节编码，不能表示中文字符。 所以 text.getByt
 
 很多短信协议要求的编码是UCS2，比如SGIP协议当中会有如下说明：
 
-<div align="left"><figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 ### **那UCS2又是什么呢？**
 
