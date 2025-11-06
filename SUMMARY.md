@@ -6,6 +6,7 @@
 
 * [数字短信架构设计](jia-gou-she-ji.md)
 * [高并发Nginx和Linux系统配置](jia-gou-she-ji/gao-bing-fa-nginx-he-linux-xi-tong-pei-zhi.md)
+* [短信内部组件设计](jia-gou-she-ji/duan-xin-nei-bu-zu-jian-she-ji.md)
 
 ## 网络 <a href="#net" id="net"></a>
 
