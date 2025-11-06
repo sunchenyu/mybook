@@ -171,7 +171,7 @@ option()：配置 ServerSocketChannel&#x20;
 
 childOption()：配置 SocketChannel（每个连接）
 
-#### childHandler()
+#### handler() / childHandler()
 
 配置新连接建立后，如何初始化它的ChannelPipeline。
 
