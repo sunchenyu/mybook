@@ -1,4 +1,4 @@
-# Netty
+# Netty编程
 
 ## Netty客户端
 
@@ -141,42 +141,66 @@ public class KernelServer {
 
 客户端结果
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<div align="left"><figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure></div>
 
 服务端结果
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
-
-
+<div align="left"><figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure></div>
 
 ## 组件设计
 
-服务器引导器
+### 引导器
 
+封装底层的 Channel、EventLoop、Handler、Pipeline 等复杂初始化逻辑，提供一个流式 API 来启动整个网络程序。
 
+#### group()
 
-客户端引导器
+配置两个线程组
 
+bossGroup：负责接收连接（accept）
 
+workerGroup：负责处理读写事件（read/write）
 
-EventLoop
+#### channel()
 
+指定使用的 Channel 类型
 
+#### option() / childOption()
 
-Channel
+option()：配置 ServerSocketChannel&#x20;
 
+childOption()：配置 SocketChannel（每个连接）
 
+#### childHandler()
 
-ChannelFuture
+配置新连接建立后，如何初始化它的ChannelPipeline。
 
+#### bind() / connect()
 
+服务端调用 bind(port) → 绑定端口，启动监听；
 
-ChannelPipeline
+客户端调用 connect(host, port) → 发起连接。
 
+### EventLoop
 
+EventLoop 是一个不断循环执行任务的线程（事件循环），负责处理 Channel 的所有 IO 事件与任务。
 
-ChannelHandler
+### Channel
 
+Channel 是 Java NIO 的一个基本构造。 它代表一个到实体（如一个硬件设备、一个文件、一个网络套接字或者一个能够执行一个或者多个不同的I/O操作的程序组件）的开放连接
 
+### ChannelFuture
+
+在 Netty 中，所有 IO 操作都是异步的（非阻塞）。比如 connect()、write()、bind()、close() 等操作不会立即完成，而是立即返回一个 ChannelFuture 对象。
+
+ChannelFuture 表示一个“还没完成、但将来会完成”的结果。
+
+### ChannelPipeline
+
+ChannelPipeline 提供了 ChannelHandler 链的容器，并定义了用于在该链上传播入站和出站事件流的API。当 Channel被创建时，它会被自动地分配到它专属的ChannelPipeline。
+
+### ChannelHandler
+
+从应用程序开发人员的角度来看，Netty的主要组件是ChannelHandler，它充当了所有处理入站和出站数据的应用程序逻辑的容器。因为ChannelHandler的方法是由网络事件触发的。事实上，ChannelHandler 可专门用于几乎任何类型的动作，例如将数据从一种格式转换为另外一种格式，或者处理转换过程中所抛出的异常。
 
 建议阅读书籍：《Netty实战》
