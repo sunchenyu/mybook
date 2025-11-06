@@ -31,6 +31,7 @@
 * [流速控制](java/liu-su-kong-zhi.md)
 * [定时任务的实现方案](java/ding-shi-ren-wu-de-shi-xian-fang-an.md)
 * [字典树](java/zi-dian-shu.md)
+* [Java集合框架](java/java-ji-he-kuang-jia.md)
 
 ## JAVA并发
 
