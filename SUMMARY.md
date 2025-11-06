@@ -24,15 +24,15 @@
 ## Java基础 <a href="#java" id="java"></a>
 
 * [字符编码体系](java/zi-fu-bian-ma-ti-xi.md)
+* [Java集合框架](java/java-ji-he-kuang-jia.md)
+* [Java集合](java/java-ji-he.md)
 * [Java线程](java/java-xian-cheng.md)
 * [Lambda表达式和函数式编程](java/lambda-biao-da-shi-he-han-shu-shi-bian-cheng.md)
 * [Java异步编程](java/java-yi-bu-bian-cheng.md)
 * [理解jar包](java/li-jie-jar-bao.md)
-* [Java集合](java/java-ji-he.md)
+* [字典树](java/zi-dian-shu.md)
 * [流速控制](java/liu-su-kong-zhi.md)
 * [定时任务的实现方案](java/ding-shi-ren-wu-de-shi-xian-fang-an.md)
-* [字典树](java/zi-dian-shu.md)
-* [Java集合框架](java/java-ji-he-kuang-jia.md)
 
 ## JAVA并发
 
