@@ -151,13 +151,25 @@ Unsafe.freeMemory(addr);
 
 ## 框架
 
+堆内缓存框架
+
+Guava Cache
+
+
+
+Caffeine
+
+
+
+堆外缓存框架
+
 OHC（Off-Heap Cache）
 
 
 
-
-
 Ehcache3
+
+
 
 ## 内存泄漏产生的原因
 
@@ -177,8 +189,6 @@ Unsafe.allocateMemory 泄漏方式
 JVM 进程停止后，所有直接内存都会被操作系统完全回收。
 
 因为只要 JVM 进程退出，进程的整个虚拟内存空间（包括 heap、off-heap、direct buffer、Unsafe 分配、mmap，都属于该进程）会被 OS 内核统一释放。用户态进程的虚拟地址空间，其生命周期与进程完全绑定。
-
-
 
 
 
