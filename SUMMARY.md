@@ -2,11 +2,12 @@
 
 * [简介](README.md)
 
-## 架构设计
+## 架构设计和性能调优
 
-* [数字短信架构设计](jia-gou-she-ji.md)
-* [高并发Nginx和Linux系统配置](jia-gou-she-ji/gao-bing-fa-nginx-he-linux-xi-tong-pei-zhi.md)
-* [短信内部组件设计](jia-gou-she-ji/duan-xin-nei-bu-zu-jian-she-ji.md)
+* [数字短信架构设计](jia-gou-she-ji-he-xing-neng-tiao-you/shu-zi-duan-xin-jia-gou-she-ji.md)
+* [高并发Nginx和Linux系统配置](jia-gou-she-ji-he-xing-neng-tiao-you/gao-bing-fa-nginx-he-linux-xi-tong-pei-zhi.md)
+* [短信内部组件设计](jia-gou-she-ji-he-xing-neng-tiao-you/duan-xin-nei-bu-zu-jian-she-ji.md)
+* [Java直接内存](jia-gou-she-ji-he-xing-neng-tiao-you/java-zhi-jie-nei-cun.md)
 
 ## 网络 <a href="#net" id="net"></a>
 

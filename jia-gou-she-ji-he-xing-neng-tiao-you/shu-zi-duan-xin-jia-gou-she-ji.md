@@ -2,7 +2,7 @@
 
 ## 架构图
 
-<figure><img src=".gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -24,12 +24,12 @@
 
 ## 模板示例
 
-<figure><img src=".gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 安卓终端展示结果
 
-<figure><img src=".gitbook/assets/54381481ece71bb4c8d08428adb223ab.jpg" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/54381481ece71bb4c8d08428adb223ab.jpg" alt="" width="375"><figcaption></figcaption></figure>
 
 ## &#x20;苹果终端展示结果
 
-<figure><img src=".gitbook/assets/image (8).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8).png" alt="" width="375"><figcaption></figcaption></figure>
