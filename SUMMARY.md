@@ -69,3 +69,4 @@
 * [彩信数据包分析](data-packet/mms.md)
 * [sgip.lua脚本](data-packet/sgip.lua-jiao-ben.md)
 * [smgp.lua脚本](data-packet/smgp.lua-jiao-ben.md)
+* [短信中心DCS编码](data-packet/duan-xin-zhong-xin-dcs-bian-ma.md)
