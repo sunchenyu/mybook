@@ -165,7 +165,29 @@ Caffeine
 
 OHC（Off-Heap Cache）
 
-
+```
+public static void main(String[] args) {
+    OHCache<Long, PortabEntity> cache =
+            OHCacheBuilder.<Long,DataEntity>newBuilder()
+                    //key的序列化方法
+                    .keySerializer(new LongSerializer())
+                    //值的序列化方法
+                    .valueSerializer(new DataSerializer())
+                    //不启动自动驱逐
+                    .eviction(Eviction.NONE)
+                    //可用容量 如下为2GB
+                    .capacity(2L * 1024 * 1024 * 1024)
+                    //缓存的分片数量
+                    .hashTableSize(32768)
+                    //扩容的阈值
+                    .loadFactor(0.9F)
+                    //是否禁用锁
+                    .unlocked(false)
+                    //分成多少段
+                    .segmentCount(32)
+                    .build();
+}
+```
 
 Ehcache3
 
