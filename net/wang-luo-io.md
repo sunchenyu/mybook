@@ -118,3 +118,19 @@ sendfile()
 splice() / tee()
 
 sendmmsg() / recvmmsg()
+
+## Netty当中的零拷贝
+
+除了系统提供的一些零拷贝手段，Netty也有自己的逻辑层面的零拷贝技术。
+
+主要就是对ByteBuf 的操作中，通过共享引用、切片、合并来避免额外复制。
+
+主要方法有
+
+```
+slice()	                    生成原 ByteBuf 的子视图（共享内存，不复制数据）
+duplicate()	            创建新的 ByteBuf 对象，指针独立但数据共享
+compositeBuffer()	    聚合多个 ByteBuf，不进行物理拷贝
+retain()/release()	    引用计数机制，确保共享内存安全
+Unpooled.wrappedBuffer()    直接包装现有字节数组，不再复制
+```
