@@ -34,6 +34,7 @@
 * [字典树](java/zi-dian-shu.md)
 * [流速控制](java/liu-su-kong-zhi.md)
 * [定时任务的实现方案](java/ding-shi-ren-wu-de-shi-xian-fang-an.md)
+* [NavigableMap](java/navigablemap.md)
 
 ## JAVA并发
 
