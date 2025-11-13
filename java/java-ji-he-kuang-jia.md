@@ -139,7 +139,9 @@ Map（接口）
 
 #### LinkedHashSet
 
-底层：LinkedHashMap特点：
+底层：LinkedHashMap
+
+特点：
 
 * 保留插入顺序
 * 访问顺序可设置 LRU（用于缓存）
