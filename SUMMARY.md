@@ -8,6 +8,7 @@
 * [高并发Nginx和Linux系统配置](jia-gou-she-ji-he-xing-neng-tiao-you/gao-bing-fa-nginx-he-linux-xi-tong-pei-zhi.md)
 * [短信内部组件设计](jia-gou-she-ji-he-xing-neng-tiao-you/duan-xin-nei-bu-zu-jian-she-ji.md)
 * [Java直接内存](jia-gou-she-ji-he-xing-neng-tiao-you/java-zhi-jie-nei-cun.md)
+* [虚拟机性能监控与故障处理工具](jia-gou-she-ji-he-xing-neng-tiao-you/xu-ni-ji-xing-neng-jian-kong-yu-gu-zhang-chu-li-gong-ju.md)
 
 ## 网络 <a href="#net" id="net"></a>
 
