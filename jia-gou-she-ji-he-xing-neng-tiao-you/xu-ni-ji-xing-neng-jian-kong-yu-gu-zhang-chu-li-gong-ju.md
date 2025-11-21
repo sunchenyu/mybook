@@ -8,7 +8,7 @@
 
 jps -l 输出进程pid 和 主类的全限定名或JAR 的完整路径
 
-<div align="left"><figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure></div>
 
 jps -m 输出传递给主类方法的参数
 
@@ -34,9 +34,33 @@ jstat -gc vmid 监视jvm堆状况，包括Eden区、两个suvivor区、老年代
 
 <figure><img src="../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
 
+jinfo java配置信息工具
+
+实时查看并修改虚拟机各项参数
+
+<div align="left"><figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure></div>
+
+jmap 内存映像工具，用于生成堆转储快照
+
+jmap -heap 15232
+
+<div align="left"><figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure></div>
 
 
 
+显示堆中对象统计信息，包括类、实例数量、合计容量
+
+<div align="left"><figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure></div>
+
+
+
+jhat 堆转储快照分析工具
+
+
+
+
+
+jstack堆栈跟踪工具
 
 
 
