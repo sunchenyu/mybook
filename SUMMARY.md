@@ -10,6 +10,7 @@
 * [Java直接内存](jia-gou-she-ji-he-xing-neng-tiao-you/java-zhi-jie-nei-cun.md)
 * [虚拟机性能监控与故障处理工具](jia-gou-she-ji-he-xing-neng-tiao-you/xu-ni-ji-xing-neng-jian-kong-yu-gu-zhang-chu-li-gong-ju.md)
 * [记录一次线上调优问题](jia-gou-she-ji-he-xing-neng-tiao-you/ji-lu-yi-ci-xian-shang-tiao-you-wen-ti.md)
+* [记录一次线上链接半开问题](jia-gou-she-ji-he-xing-neng-tiao-you/ji-lu-yi-ci-xian-shang-lian-jie-ban-kai-wen-ti.md)
 
 ## 网络 <a href="#net" id="net"></a>
 
