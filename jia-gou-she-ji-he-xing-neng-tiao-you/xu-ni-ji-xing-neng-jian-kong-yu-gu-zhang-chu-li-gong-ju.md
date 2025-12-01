@@ -8,11 +8,11 @@
 
 jps -l 输出进程pid 和 主类的全限定名或JAR 的完整路径
 
-<div align="left"><figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 jps -m 输出传递给主类方法的参数
 
-<div align="left"><img src="../.gitbook/assets/0 (1)" alt="0" height="200" width="1454"></div>
+<div align="left"><img src="../.gitbook/assets/0 (1) (1)" alt="0" height="200" width="1454"></div>
 
 jps -v 输出虚拟机进程启动时的jvm参数
 
@@ -38,19 +38,19 @@ jinfo java配置信息工具
 
 实时查看并修改虚拟机各项参数
 
-<div align="left"><figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure></div>
 
 jmap 内存映像工具，用于生成堆转储快照
 
 jmap -heap 15232
 
-<div align="left"><figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 
 
 显示堆中对象统计信息，包括类、实例数量、合计容量
 
-<div align="left"><figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 
 
