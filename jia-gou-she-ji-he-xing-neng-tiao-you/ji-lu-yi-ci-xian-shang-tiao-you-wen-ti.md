@@ -63,3 +63,29 @@
 <figure><img src="../.gitbook/assets/image (63).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/1764571324071.png" alt=""><figcaption></figcaption></figure>
+
+## 计算一下对象的示例大小
+
+63121201个Portab对象占用字节大小为2019878432
+
+每个对象占用大小为 2019878432 / 63121201=32字节
+
+Portab对象字段如下
+
+```
+private String mobile;
+private byte network;
+private byte provId;
+private byte outnet;
+private byte primarynet;
+private String effectiveTime;
+private char type;
+```
+
+32位JVM下计算为
+
+12对象头+4字节对齐填充数据+4字节引用长度+4字节数据字段+4字节引用字段+2字节type数据
+
+计算结果为30字节
+
+最后需要对齐填充为32字节，同占用内存相同
