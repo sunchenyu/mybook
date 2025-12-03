@@ -44,13 +44,13 @@ jmap 内存映像工具，用于生成堆转储快照
 
 jmap -heap 15232
 
-<div align="left"><figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 
 
 显示堆中对象统计信息，包括类、实例数量、合计容量
 
-<div align="left"><figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 
 
