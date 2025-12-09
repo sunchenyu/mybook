@@ -5,6 +5,7 @@
 ## 架构设计和性能调优
 
 * [短信网关](jia-gou-she-ji-he-xing-neng-tiao-you/duan-xin-wang-guan.md)
+* [高性能短信系统架构设计实践](jia-gou-she-ji-he-xing-neng-tiao-you/gao-xing-neng-duan-xin-xi-tong-jia-gou-she-ji-shi-jian.md)
 * [数字短信架构设计](jia-gou-she-ji-he-xing-neng-tiao-you/shu-zi-duan-xin-jia-gou-she-ji.md)
 * [高并发Nginx和Linux系统配置](jia-gou-she-ji-he-xing-neng-tiao-you/gao-bing-fa-nginx-he-linux-xi-tong-pei-zhi.md)
 * [短信内部组件设计](jia-gou-she-ji-he-xing-neng-tiao-you/duan-xin-nei-bu-zu-jian-she-ji.md)
