@@ -32,7 +32,6 @@
 * [字符编码体系](java/zi-fu-bian-ma-ti-xi.md)
 * [Java集合框架](java/java-ji-he-kuang-jia.md)
 * [Java集合](java/java-ji-he.md)
-* [Java线程](java/java-xian-cheng.md)
 * [Lambda表达式和函数式编程](java/lambda-biao-da-shi-he-han-shu-shi-bian-cheng.md)
 * [Java异步编程](java/java-yi-bu-bian-cheng.md)
 * [理解jar包](java/li-jie-jar-bao.md)
@@ -43,6 +42,7 @@
 
 ## JAVA并发
 
+* [Java线程](java-bing-fa/java-xian-cheng.md)
 * [Unsafe中的CAS](java-bing-fa/unsafe-cas.md)
 * [Unsafe中的park和unpark](java-bing-fa/unsafe-park.md)
 * [手写ReentrantLock锁](java-bing-fa/concurrent-reentrantlock.md)
