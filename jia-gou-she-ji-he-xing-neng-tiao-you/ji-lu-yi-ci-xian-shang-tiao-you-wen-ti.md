@@ -82,10 +82,6 @@ private String effectiveTime;
 private char type;
 ```
 
-32位JVM下计算为
+使用工具查看一下大小
 
-12对象头+4字节类型指针+4字节引用长度+4字节数据字段+4字节引用字段+2字节type数据
-
-计算结果为30字节
-
-最后需要对齐填充为32字节，同占用内存相同
+<figure><img src="../.gitbook/assets/image (68).png" alt=""><figcaption></figcaption></figure>
