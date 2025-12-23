@@ -195,7 +195,7 @@ lengthAdjustment =长度字段“没有算进去”的字节数 − 已经多算
 
 ***
 
-### 八、常见错误总结 <a href="#vtgx-1766479361927" id="vtgx-1766479361927"></a>
+### 九、常见错误总结 <a href="#vtgx-1766479361927" id="vtgx-1766479361927"></a>
 
 把 lengthAdjustment 当成“拍脑袋参数”
 
@@ -207,7 +207,7 @@ lengthAdjustment =长度字段“没有算进去”的字节数 − 已经多算
 
 ***
 
-### 九、结语 <a href="#dyrp-1766479361938" id="dyrp-1766479361938"></a>
+### 十、结语 <a href="#dyrp-1766479361938" id="dyrp-1766479361938"></a>
 
 LengthFieldBasedFrameDecoder 并不复杂，复杂的是协议本身。
 
