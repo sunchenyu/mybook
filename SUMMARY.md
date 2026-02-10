@@ -14,6 +14,10 @@
 * [记录一次线上调优问题](jia-gou-she-ji-he-xing-neng-tiao-you/ji-lu-yi-ci-xian-shang-tiao-you-wen-ti.md)
 * [记录一次线上连接半开问题](jia-gou-she-ji-he-xing-neng-tiao-you/ji-lu-yi-ci-xian-shang-lian-jie-ban-kai-wen-ti.md)
 
+## AI
+
+* [langchain4j](ai/langchain4j.md)
+
 ## 网络 <a href="#net" id="net"></a>
 
 * [网络IO](net/wang-luo-io.md)
