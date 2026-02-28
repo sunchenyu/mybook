@@ -30,6 +30,8 @@
 
 <figure><img src="../.gitbook/assets/54381481ece71bb4c8d08428adb223ab.jpg" alt="" width="375"><figcaption></figcaption></figure>
 
-## &#x20;苹果终端展示结果
+<h2 align="center"><img src="../.gitbook/assets/6202c8053306eebee64e5316349ba49.jpg" alt=""> </h2>
+
+## 苹果终端展示结果
 
 <figure><img src="../.gitbook/assets/image (8) (1).png" alt="" width="375"><figcaption></figcaption></figure>
