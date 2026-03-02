@@ -18,6 +18,10 @@
 
 * [langchain4j](ai/langchain4j.md)
 
+***
+
+* [理解netty各个组件使用](li-jie-netty-ge-ge-zu-jian-shi-yong.md)
+
 ## 网络 <a href="#net" id="net"></a>
 
 * [网络IO](net/wang-luo-io.md)
