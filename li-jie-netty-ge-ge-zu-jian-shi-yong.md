@@ -1,5 +1,7 @@
 # 理解netty各个组件使用
 
+服务端
+
 ```
 package com.ultra.wap;
 
@@ -95,6 +97,46 @@ public class NettyServerExample {
             bossGroup.shutdownGracefully();
             workerGroup.shutdownGracefully();
             System.out.println("Netty 服务端已关闭");
+        }
+    }
+}
+```
+
+客户端
+
+```
+package com.ultra.wap;
+
+import io.netty.channel.ChannelOption;
+import io.netty.channel.nio.NioEventLoopGroup;
+import io.netty.channel.socket.nio.NioSocketChannel;
+import io.netty.handler.codec.LineBasedFrameDecoder;
+import io.netty.handler.codec.string.StringDecoder;
+import io.netty.handler.codec.string.StringEncoder;
+
+import java.io.IOException;
+import java.net.InetSocketAddress;
+import java.util.Scanner;
+
+public class Test {
+    public static void main(String[] args) throws InterruptedException, IOException {
+        NioSocketChannel ch = new NioSocketChannel();
+        ch.config().setOption(ChannelOption.SO_KEEPALIVE, true);
+        ch.config().setOption(ChannelOption.TCP_NODELAY, true);
+
+        ch.pipeline().addLast(new LineBasedFrameDecoder(1024));
+        ch.pipeline().addLast("a", new StringEncoder());
+        ch.pipeline().addLast("b", new StringDecoder());
+
+        NioEventLoopGroup loop = new NioEventLoopGroup(1); // 手动拿一个 EventLoop
+        loop.register(ch).sync();  // 注册 Channel 到 EventLoop
+        ch.connect(new InetSocketAddress("127.0.0.1", 8083)).sync();
+        ch.writeAndFlush("hello world\n");
+
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            String next = scanner.next();
+            ch.writeAndFlush(next + "\n");
         }
     }
 }
